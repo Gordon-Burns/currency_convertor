@@ -19,3 +19,4 @@ if button:
     result = float(amount_to_convert) * float(rate)
     st.write(f"Currently 1 {selected_option_base} is worth {rate} {selected_option_target}")
     st.write(f"{amount_to_convert} {selected_option_base} = {result} {selected_option_target}")
+

@@ -8,7 +8,7 @@ API_KEY = streamlit.secrets["api_key"]
 
 def query(selected_option_base,selected_option_target):
     response = requests.get(
-        f'https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_wLXMisOVTwUxv4MIbt3cX4cplz70bPHkl00jfSeE&currencies={selected_option_target}&base_currency={selected_option_base}')
+        f'https://api.freecurrencyapi.com/v1/latest?apikey={API_KEY}&currencies={selected_option_target}&base_currency={selected_option_base}')
     response_data = json.loads(response.content)
     result = response_data['data'][selected_option_target]
     return result
